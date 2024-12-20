@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <main>
+        <section id="image-capture">
+            <h2>Capture Image</h2>
+            <label for="capture" class="custom-file-upload">Take a picture</label>
+            <input type="file" id="capture" accept="image/*" capture="environment" style="display: none;">
+            <img id="captured-image" src="" alt="Captured Image" />
+        </section>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% endblock javascripts %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <main>
+        <div id="camera-container">
+            <video id="video" width="300" height="200" autoplay></video>
+            <button id="capture_qr">Validate QR</button>
+            <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+        </div>
+        <div id="image-preview"></div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+{% endblock javascripts %}
